@@ -34,36 +34,36 @@ end
 tap "homebrew/bundle"
 
 # packages
-brew "stow" # symlink farm manager
+# brew "stow" # symlink farm manager
 brew "bat" # better cat
-brew "cloc" # lines of code counter
-brew "entr" # file watcher / command runner
+# brew "cloc" # lines of code counter
+# brew "entr" # file watcher / command runner
 brew "eza" # ls alternative
 brew "fd" # find alternative
-brew "fnm" # Fast Node version manager
+# brew "fnm" # Fast Node version manager
 brew "fzf" # Fuzzy file searcher, used in scripts and in vim
 brew "gh" # GitHub CLI
 brew "git" # Git version control (latest version)
-brew "git-delta" # a better git diff
-brew "glow" # markdown viewer
-brew "gnupg" # GPG
+# brew "git-delta" # a better git diff
+# brew "glow" # markdown viewer
+# brew "gnupg" # GPG
 brew "grep" # grep (latest)
-brew "highlight" # code syntax highlighting
-brew "htop" # a top alternative
-brew "jq" # work with JSON files in shell scripts
-brew "lazygit" # a better git UI
-brew "neofetch" # pretty system info
+# brew "highlight" # code syntax highlighting
+# brew "htop" # a top alternative
+# brew "jq" # work with JSON files in shell scripts
+# brew "lazygit" # a better git UI
+# brew "neofetch" # pretty system info
 brew "neovim" # A better vim
 brew "python" # python (latest)
-brew "ripgrep" # very fast file searcher
-brew "shellcheck" # diagnostics for shell sripts
-brew "stylua" # lua code formatter
+# brew "ripgrep" # very fast file searcher
+# brew "shellcheck" # diagnostics for shell sripts
+# brew "stylua" # lua code formatter
 brew "tmux" # terminal multiplexer
 brew "tree" # pretty-print directory contents
 brew "vim" # Vim (latest)
-brew "wdiff" # word differences in text files
+# brew "wdiff" # word differences in text files
 brew "wget" # internet file retriever
-brew "z" # switch between most used directories
-brew "zoxide" # switch between most used directories
+# brew "z" # switch between most used directories
+# brew "zoxide" # switch between most used directories
 brew "zsh" # zsh (latest)
-brew "pkgxdev/made/pkgx" # npx, but for anything
+# brew "pkgxdev/made/pkgx" # npx, but for anything

@@ -10,12 +10,12 @@ COLOR_YELLOW="\033[1;33m"
 COLOR_NONE="\033[0m"
 
 linkables=(
-  # "zsh/.zshrc"
-  # "zsh/.zshenv"
-  # "zsh/.zprofile"
-  # "zsh/.zsh_aliases"
-  # "zsh/.zsh_functions"
-  # "zsh/.zsh_prompt"
+  "config/zsh/.zshrc"
+  "config/zsh/.zshenv"
+  "config/zsh/.zprofile"
+  "config/zsh/.zsh_aliases"
+  "config/zsh/.zsh_functions"
+  "config/zsh/.zsh_prompt"
 )
 
 # Configuration home
@@ -110,8 +110,8 @@ setup_symlinks() {
     if [ -e "$target" ]; then
       info "~${target#"$HOME"} already exists... Skipping."
     else
-      info "Creating symlink for $file"
-      ln -s "$DOTFILES/$file" "$target"
+      info "Creating symlink for $file to $target"
+      ln -fnsv "$DOTFILES/$file" "$target"
     fi
   done
 
