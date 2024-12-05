@@ -5,6 +5,7 @@
     # A local gitconfig, outside of version control.
     # If the file doesn't exist it is silently ignored
     path = ~/.gitconfig-local
+    path = ~/ghq/github.com/dandavison/delta/themes.gitconfig
 [alias]
     # list all aliases
     la = "!git config -l | grep alias | cut -c 7-"
@@ -146,9 +147,10 @@
     editor = vim
     whitespace = cr-at-eol
 [delta]
-    features = unobtrusive-line-numbers decorations
+    features = arctic-fox
     whitespace-error-style = 22 reverse
     syntax-theme = base16-256
+    side-by-side = true
 [delta "unobtrusive-line-numbers"]
     line-numbers = true
     # line-numbers-minus-style = "#444444"
