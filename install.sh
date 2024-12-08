@@ -10,6 +10,7 @@ COLOR_YELLOW="\033[1;33m"
 COLOR_NONE="\033[0m"
 
 linkables=(
+  ".Brewfile",
   "config/zsh/.zshrc"
   "config/zsh/.zshenv"
   "config/zsh/.zprofile"
