@@ -33,6 +33,9 @@ setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS
 setopt LOCAL_TRAPS
 setopt PROMPT_SUBST
+setopt AUTO_CD                   # treat $dirpath as 'cd $dirpath'
+setopt AUTO_PUSHD                # auto pushd after cd
+setopt PUSHD_IGNORE_DUPS         # do not add the duplicate dirs to stack
 
 # history
 setopt EXTENDED_HISTORY          # write the history file in the ":start:elapsed;command" format.
@@ -108,8 +111,16 @@ fi
 
 if [ -f $HOME/.fzf.zsh ]; then
   source $HOME/.fzf.zsh
+  export FZF_TMUX_OPTS="-p 80%"
   export FZF_DEFAULT_COMMAND='fd --type f'
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_CTRL_T_OPTS="--tmux 80%
+    --preview 'bat -n --color=always {}'
+    --preview-window right"
+  export FZF_ALT_C_COMMAND="fd --type d"
+  export FZF_ALT_C_OPTS="--tmux 80%
+    --preview 'tree -C {}
+    --preview-window right"
   export FZF_DEFAULT_OPTS="--color bg:-1,bg+:-1,fg:-1,fg+:#feffff,hl:#993f84,hl+:#d256b5,info:#676767,prompt:#676767,pointer:#676767"
 fi
 
@@ -154,4 +165,6 @@ for file in "$ZDOTDIR/.zsh_prompt" "$ZDOTDIR/.zsh_aliases"; do
         source $file
     fi
 done
+
+autoload chpwd
 

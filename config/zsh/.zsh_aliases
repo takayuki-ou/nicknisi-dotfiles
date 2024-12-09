@@ -31,8 +31,12 @@ alias clsym="find -L . -name . -o -type d -prune -o -type l -exec rm {} +"
 
 # use eza if available
 if [[ -x "$(command -v eza)" ]]; then
-  alias ll="eza --icons --git --long"
-  alias l="eza --icons --git --all --long"
+  alias l="eza --icons --git --long"
+  alias ll="eza --icons --git --all --long
+    --no-user --created --modified --bytes --git
+    --header --time-style='+%Y-%m-%d %H:%M'
+    --group-directories-last --sort=modified"
+  alias lt="eza --icons --git --tree --level=2 --group-directories-last --sort=name"
 else
   alias l="ls -lah ${colorflag}"
   alias ll="ls -lFh ${colorflag}"

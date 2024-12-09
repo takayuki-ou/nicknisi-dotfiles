@@ -49,6 +49,14 @@ prepend_path() {
   )
 }
 
+chpwd() {
+  if [[ $(pwd) == $HOME ]]; then
+    clear
+  else
+    ll
+  fi
+}
+
 zfetch() {
   # Terminal colors
   TC='\e['
