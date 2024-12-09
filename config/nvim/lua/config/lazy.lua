@@ -31,14 +31,14 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "kanazawa" } },
+  -- install = { colorscheme = { "" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
 
 -- Setup lualine.nvim
-require("lualine").setup {
+require("lualine").setup({
   options = { 
     icons_enabled = true,
-    theme = 'nightfly' },
-}
+  },
+})
