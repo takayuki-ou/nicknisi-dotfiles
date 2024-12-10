@@ -166,5 +166,14 @@ for file in "$ZDOTDIR/.zsh_prompt" "$ZDOTDIR/.zsh_aliases"; do
     fi
 done
 
+# show directory info when cd
+chpwd() {
+  if [[ $(pwd) == $HOME ]]; then
+    clear
+  else
+    ll
+  fi
+}
+
 autoload chpwd
 
