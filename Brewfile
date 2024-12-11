@@ -1,3 +1,18 @@
+# vim:ft=ruby
+
+if OS.mac?
+  
+  brew "noti"
+  brew "trash"
+
+  cask "font-fira-code-nerd-font"
+  cask "font-jetbrains-mono-nerd-font"
+
+elsif OS.linux?
+  
+  brew "xclip"
+end
+
 tap "homebrew/bundle"
 brew "bat"
 brew "eza"
