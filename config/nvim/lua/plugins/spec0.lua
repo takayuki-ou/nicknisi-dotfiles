@@ -45,14 +45,6 @@ return {
   { "stevearc/dressing.nvim", event = "VeryLazy" },
 
   {
-    "Wansmer/treesj",
-    keys = {
-      { "J", "<cmd>TSJToggle<cr>", desc = "Join Toggle" },
-    },
-    opts = { use_default_keymaps = false, max_join_length = 150 },
-  },
-
-  {
     "monaqa/dial.nvim",
     -- lazy-load on keys
     -- mode is `n` by default. For more advanced options, check the section on key mappings
@@ -100,12 +92,6 @@ return {
         -- toggler = { line = '<C-/>'}
         padding = true
       }
-  },
-
-  {
-    'Wansmer/treesj',
-    keys = { '<space>m', '<space>j', '<space>s' },
-    dependencies = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter
   },
 
   {
