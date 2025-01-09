@@ -14,6 +14,7 @@ linkables=(
   "config/zsh/.zshrc"
   "config/zsh/.zshenv"
   "config/zsh/.zprofile"
+  "config/zsh/.zlogin"
   "config/zsh/.zsh_aliases"
   "config/zsh/.zsh_functions"
   "config/zsh/.zsh_prompt"
