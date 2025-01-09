@@ -1,0 +1,13 @@
+[general]
+import = [
+ "~/.config/alacritty/theme.toml"
+]
+
+[window]
+opacity = 0.8
+
+[font]
+normal = {family = "FiraCode Nerd Font", style= "Regular"}
+
+[terminal]
+osc52 = "CopyPaste"
