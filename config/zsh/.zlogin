@@ -1,1 +1,1 @@
-tmux a -t default || tmux new -s default
+# tmux a -t default || tmux new -s default

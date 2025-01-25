@@ -1,3 +1,4 @@
+
 export ZSH=$DOTFILES/zsh
 
 source "$ZDOTDIR/.zsh_functions"
@@ -46,14 +47,14 @@ setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a d
 setopt COMPLETE_ALIASES
 
 # make terminal command navigation sane again
-bindkey "^[[1;5C" forward-word                      # [Ctrl-right] - forward one word
-bindkey "^[[1;5D" backward-word                     # [Ctrl-left] - backward one word
-bindkey '^[^[[C' forward-word                       # [Ctrl-right] - forward one word
-bindkey '^[^[[D' backward-word                      # [Ctrl-left] - backward one word
-bindkey '^[[1;3D' beginning-of-line                 # [Alt-left] - beginning of line
-bindkey '^[[1;3C' end-of-line                       # [Alt-right] - end of line
-bindkey '^[[5D' beginning-of-line                   # [Alt-left] - beginning of line
-bindkey '^[[5C' end-of-line                         # [Alt-right] - end of line
+# bindkey "^[[1;5C" forward-word                      # [Ctrl-right] - forward one word
+# bindkey "^[[1;5D" backward-word                     # [Ctrl-left] - backward one word
+# bindkey '^[^[[C' forward-word                       # [Ctrl-right] - forward one word
+# bindkey '^[^[[D' backward-word                      # [Ctrl-left] - backward one word
+# bindkey '^[[1;3D' beginning-of-line                 # [Alt-left] - beginning of line
+# bindkey '^[[1;3C' end-of-line                       # [Alt-right] - end of line
+# bindkey '^[[5D' beginning-of-line                   # [Alt-left] - beginning of line
+# bindkey '^[[5C' end-of-line                         # [Alt-right] - end of line
 bindkey '^?' backward-delete-char                   # [Backspace] - delete backward
 if [[ "${terminfo[kdch1]}" != "" ]]; then
     bindkey "${terminfo[kdch1]}" delete-char        # [Delete] - delete forward
@@ -62,7 +63,7 @@ else
     bindkey "^[3;5~" delete-char
     bindkey "\e[3~" delete-char
 fi
-bindkey "^A" vi-beginning-of-line
+bindkey "^Y" vi-beginning-of-line
 bindkey -M viins "^F" vi-forward-word               # [Ctrl-f] - move to next word
 bindkey -M viins "^E" vi-add-eol                    # [Ctrl-e] - move to end of line
 bindkey "^J" history-beginning-search-forward
@@ -176,4 +177,3 @@ chpwd() {
 }
 
 autoload chpwd
-
