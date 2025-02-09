@@ -1,3 +1,4 @@
+clear
 
 export ZSH=$DOTFILES/zsh
 

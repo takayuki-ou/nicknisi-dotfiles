@@ -7,6 +7,7 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 2 -- tab width in the unit of space
 vim.opt.shiftwidth = 2 -- 
 vim.opt.number = true -- line number under the cursor
+vim.opt.clipboard:append({"unnamedplus"}) -- yank with system clipboard
 -- key map --
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
 vim.keymap.set('i', '{', '{}<Left>', {noremap = true})
@@ -14,6 +15,9 @@ vim.keymap.set('i', '[', '[]<Left>', {noremap = true})
 vim.keymap.set('i', '(', '()<Left>', {noremap = true})
 vim.keymap.set('n', '<S-h>', '0', { noremap = true })
 vim.keymap.set('n', '<S-l>', '$', { noremap = true })
+vim.keymap.set('n', '<C-j>', ':bnext<CR>', { noremap = true })
+vim.keymap.set('n', '<C-k>', ':bprevious<CR>', { noremap = true })
+
 -- dial --
 vim.keymap.set("n", "<C-a>", function()
     require("dial.map").manipulate("increment", "normal")
